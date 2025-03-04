@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import { Camera, CameraType } from 'expo-camera';
+import { Camera } from 'expo-camera';
 import { manipulateAsync, SaveFormat } from 'expo-image-manipulator';
 import * as MediaLibrary from 'expo-media-library';
 
 export default function CameraScreen({ onImageCaptured }) {
   const [hasPermission, setHasPermission] = useState(null);
-  const [cameraType, setCameraType] = useState(CameraType.back);
+  const [cameraType, setCameraType] = useState(Camera.Constants.Type.back);
   const [isProcessing, setIsProcessing] = useState(false);
   const cameraRef = useRef(null);
 
