@@ -11,7 +11,7 @@ import * as MediaLibrary from "expo-media-library";
 
 export default function CameraScreen({ onImageCaptured }) {
     const [hasPermission, setHasPermission] = useState(null);
-    const [cameraType, setCameraType] = useState("back");
+    const [cameraType, setCameraType] = useState<CameraType>('back');
     const [isProcessing, setIsProcessing] = useState(false);
     const cameraRef = useRef(null);
 
@@ -38,16 +38,17 @@ export default function CameraScreen({ onImageCaptured }) {
                 });
 
                 // Basic processing - you can enhance this for better document detection
-                const processedImage = await manipulateAsync(
-                    photo.uri,
-                    [
-                        { resize: { width: 1500 } },
-                        { contrast: 1.2 },
-                        { brightness: -0.05 },
-                        { saturate: 1.5 },
-                    ],
-                    { format: SaveFormat.JPEG, compress: 0.8 }
-                );
+                // const processedImage = await manipulateAsync(
+                //     photo.uri,
+                //     [
+                //         { resize: { width: 1500 } },
+                //         { contrast: 1.2 },
+                //         { brightness: -0.05 },
+                //         { saturate: 1.5 },
+                //     ],
+                //     { format: SaveFormat.JPEG, compress: 0.8 }
+                // );
+                const processedImage = photo;
 
                 // Pass the processed image to parent component
                 if (onImageCaptured) {
@@ -78,7 +79,7 @@ export default function CameraScreen({ onImageCaptured }) {
 
     return (
         <View style={styles.container}>
-            <Camera
+            <CameraView
                 style={styles.camera}
                 type={cameraType}
                 ref={cameraRef}
@@ -101,7 +102,7 @@ export default function CameraScreen({ onImageCaptured }) {
                         )}
                     </TouchableOpacity>
                 </View>
-            </Camera>
+            </CameraView>
         </View>
     );
 }

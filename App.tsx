@@ -8,72 +8,72 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState('home');
   const [capturedImages, setCapturedImages] = useState([]);
   const [currentEditingImage, setCurrentEditingImage] = useState(null);
-  
+
   const handleImageCaptured = (imageUri) => {
     setCurrentEditingImage(imageUri);
     setCurrentScreen('edit');
   };
-  
+
   const handleSaveEditedImage = (editedImageUri) => {
     setCapturedImages([...capturedImages, editedImageUri]);
     setCurrentEditingImage(null);
     setCurrentScreen('preview');
   };
-  
+
   const handleCancelEdit = () => {
     setCurrentEditingImage(null);
     setCurrentScreen('camera');
   };
-  
+
   const handleAddMore = () => {
     setCurrentScreen('camera');
   };
-  
+
   const handleDone = () => {
     setCapturedImages([]);
     setCurrentScreen('home');
   };
-  
+
   const renderScreen = () => {
     switch (currentScreen) {
       case 'home':
         return (
           <View style={styles.homeContainer}>
             <Text style={styles.title}>Document Scanner</Text>
-            <TouchableOpacity 
-              style={styles.startButton} 
+            <TouchableOpacity
+              style={styles.startButton}
               onPress={() => setCurrentScreen('camera')}
             >
               <Text style={styles.startButtonText}>Start Scanning</Text>
             </TouchableOpacity>
           </View>
         );
-        
+
       case 'camera':
         return <CameraScreen onImageCaptured={handleImageCaptured} />;
-        
+
       case 'edit':
         return (
-          <ImageEditor 
-            imageUri={currentEditingImage} 
-            onSave={handleSaveEditedImage} 
-            onCancel={handleCancelEdit} 
+          <ImageEditor
+            imageUri={currentEditingImage}
+            onSave={handleSaveEditedImage}
+            onCancel={handleCancelEdit}
           />
         );
-        
+
       case 'preview':
         return (
           <View style={styles.previewContainer}>
             <Text style={styles.title}>Documents ({capturedImages.length})</Text>
             <View style={styles.previewButtonContainer}>
-              <TouchableOpacity 
-                style={styles.previewButton} 
+              <TouchableOpacity
+                style={styles.previewButton}
                 onPress={handleAddMore}
               >
                 <Text style={styles.previewButtonText}>Add More</Text>
               </TouchableOpacity>
-              <TouchableOpacity 
-                style={[styles.previewButton, styles.createPdfButton]} 
+              <TouchableOpacity
+                style={[styles.previewButton, styles.createPdfButton]}
                 onPress={() => setCurrentScreen('pdf')}
               >
                 <Text style={styles.createPdfButtonText}>Create PDF</Text>
@@ -81,21 +81,21 @@ export default function App() {
             </View>
           </View>
         );
-        
+
       case 'pdf':
         return (
-          <PDFGenerator 
-            images={capturedImages} 
-            onBack={() => setCurrentScreen('preview')} 
-            onDone={handleDone} 
+          <PDFGenerator
+            images={capturedImages}
+            onBack={() => setCurrentScreen('preview')}
+            onDone={handleDone}
           />
         );
-        
+
       default:
         return <View />;
     }
   };
-  
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
