@@ -1,0 +1,8 @@
+npm install expo-camera
+npm install expo-image-manipulator
+npm install expo-sharing
+npm install expo-document-picker
+npm install expo-file-system
+npm install expo-media-library
+npm install react-native-view-shot
+npm install expo-print
