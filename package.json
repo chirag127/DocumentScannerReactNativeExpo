@@ -12,7 +12,7 @@
   "dependencies": {
     "expo": "~52.0.37",
     "expo-camera": "~16.0.17",
-    "expo-document-picker": "^13.0.3",
+    "expo-document-picker": "^13.1.6",
     "expo-file-system": "^18.0.11",
     "expo-image-manipulator": "^13.0.6",
     "expo-media-library": "^17.0.6",
