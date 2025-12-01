@@ -1,294 +1,153 @@
-# ScannerFlow: Document Capture & Archive Mobile App
+# ScannerFlow-Document-Capture-Mobile-App
 
-<p align="center">
-  <a href="#">
-    <img src="https://via.placeholder.com/300x150/000000/FFFFFF?text=ScannerFlow" alt="ScannerFlow Logo" width="300" style="background-color: #000000; padding: 20px; border-radius: 10px;">
-  </a>
-</p>
+[![GitHub License](https://img.shields.io/github/license/USERNAME/ScannerFlow-Document-Capture-Mobile-App?style=for-the-badge&color=3478F6)](LICENSE)
+[![CI Status](https://img.shields.io/github/workflow/status/USERNAME/ScannerFlow-Document-Capture-Mobile-App/ci.yml?style=for-the-badge)](.github/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript%206.x-blue?style=for-the-badge&logo=typescript&logoColor=white)]()
+[![Build Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge&logo=zapier&logoColor=white)]()
+[![Code Style](https://img.shields.io/badge/Linter%20%26%20Formatter-Biome-orange?style=for-the-badge&logo=biome&logoColor=white)]()
+[![Testing](https://img.shields.io/badge/Testing-Vitest%20%26%20Playwright-green?style=for-the-badge&logo=vitest&logoColor=white)]()
 
-<p align="center">
-A high-fidelity, cross-platform document scanning and digital archiving mobile application.
-<br>
-Optimized for seamless user experience on iOS and Android, powered by advanced image processing.
-</p>
-
-[![Build Status](https://img.shields.io/travis/com/yourusername/ScannerFlow.svg?style=flat-square)](https://travis-ci.com/yourusername/ScannerFlow)
-[![Coverage Status](https://img.shields.io/coveralls/github/yourusername/ScannerFlow.svg?style=flat-square)](https://coveralls.io/github/yourusername/ScannerFlow?branch=main)
-[![TypeScript Version](https://img.shields.io/badge/typescript-6.x-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
-[![React Native Version](https://img.shields.io/badge/react--native-0.7x-purple.svg?style=flat-square)](https://reactnative.dev/)
-[![Expo Version](https://img.shields.io/badge/expo-0.7x-green.svg?style=flat-square)](https://expo.dev/)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-orange.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc/4.0/)
-[![Style: Biome](https://img.shields.io/badge/style-biome-informational.svg?style=flat-square)](https://biomejs.dev/)
-
-<p align="center">
-  <a href="#">
-    <img src="https://img.shields.io/github/stars/yourusername/ScannerFlow?style=social&label=Star+This+Repo" alt="Star This Repo">
-  </a>
-</p>
+[**Star ⭐ this Repo** if you value high-fidelity mobile tooling!]
 
 ---
 
-## 🚀 BLUF (Bottom Line Up Front)
+## BLUF: Bottom Line Up Front
 
-ScannerFlow is a state-of-the-art mobile application designed to transform your device into a powerful document scanner and digital archive. Leveraging React Native and Expo, it offers advanced image processing for high-fidelity scans, ensuring a seamless and efficient experience for organizing your essential documents.
+**ScannerFlow** is a state-of-the-art, high-performance document capture application built with **React Native and Expo**, engineered for rapid, intelligent digital archiving. It enforces future-proof architecture, delivering superior image quality and optimized UX using the latest 2026 mobile development standards.
 
----
+## 🧭 Architecture Overview (Feature-Sliced Design)
 
-## 🌳 Architecture Overview
+This application adheres strictly to the Feature-Sliced Design (FSD) pattern, ensuring strict separation of concerns, high testability, and modular scalability for the React Native environment.
 
 ```ascii
-. ScannerFlow (Mobile App)
+. (Root)
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── features/
-│   │   ├── scanning/
-│   │   │   ├── components/
-│   │   │   ├── screens/
-│   │   │   ├── services/
-│   │   │   └── state/
-│   │   ├── archiving/
-│   │   │   ├── components/
-│   │   │   ├── screens/
-│   │   │   └── services/
-│   │   └── common/       # Shared features (e.g., Camera, Storage)
-│   ├── navigation/     # Navigation setup (React Navigation)
-│   ├── styles/         # Global styles and themes
-│   ├── types/
-│   ├── utils/
-│   └── App.tsx         # Root component
-├── assets/
-├── env/
-├── tests/
-├── .env.example
-├── .eslintrc.js
-├── biome.json
-├── index.js
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
-
-. GitHub Workflows
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml         # CI/CD Pipeline
-│   ├── CONTRIBUTING.md
-│   ├── ISSUE_TEMPLATE/
-│   │   └── bug_report.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── SECURITY.md
-
-. Documentation
-└── README.md
+│   ├── app/            (Application Entry & Global State)
+│   ├── features/       (Business Logic & Features)
+│   │   ├── scanner/    (Core Document Capture Logic)
+│   │   ├── history/    (Archive Browsing & Search)
+│   │   └── settings/   (User Preferences & Configuration)
+│   ├── shared/
+│   │   ├── ui/         (Atomic/Shared Components: Buttons, Icons)
+│   │   └── lib/        (Utility Functions, API Clients)
+│   └── pages/
+│       ├── Home.tsx
+│       └── ArchiveView.tsx
+├── .github/            (DevOps & Governance)
+├── tests/              (Isolated Test Suites)
+└── package.json
 ```
 
----
+## 📋 Table of Contents
 
-## 📜 Table of Contents
-
-* [ScannerFlow: Document Capture & Archive Mobile App](#scannerflow-document-capture--archive-mobile-app)
-* [🚀 BLUF (Bottom Line Up Front)](#rocket-bluf-bottom-line-up-front)
-* [🌳 Architecture Overview](#tree-architecture-overview)
-* [📜 Table of Contents](#scroll-table-of-contents)
-* [⚙️ Core Technologies & Stack](#gear-core-technologies--stack)
-* [💡 Key Features](#light-bulb-key-features)
-* [🔧 Development Setup](#wrench-development-setup)
-* [▶️ Development Scripts](#play-development-scripts)
-* [🗄️ Development Principles](#file-cabinet-development-principles)
-* [🔒 Security Guidelines](#lock-security-guidelines)
-* [✅ Testing Strategy](#white_check_mark-testing-strategy)
-* [🤝 Contributing](#handshake-contributing)
-* [⚖️ License](#scale-license)
-* [🤖 AI Agent Directives](#robot-ai-agent-directives)
+1. [Features](#features)
+2. [Apex Technology Stack (2026 Standard)](#apex-technology-stack-2026-standard)
+3. [Development & Setup](#development--setup)
+4. [Development Principles](#development-principles)
+5. [🤖 AI Agent Directives (Read First)](#-ai-agent-directives-read-first)
+6. [Contribution & Security](#contribution--security)
 
 ---
 
-## ⚙️ Core Technologies & Stack
+## ✨ Features
 
-*   **Language:** TypeScript 6.x (Strict Mode)
-*   **Framework:** React Native 0.7x
-*   **Bootstrapping:** Expo 0.7x
-*   **Bundler:** Vite 7 (for Expo Managed workflow)
-*   **State Management:** Signals (or a suitable lightweight alternative like Zustand/Jotai)
-*   **Navigation:** React Navigation
-*   **Styling:** Tailwind CSS (with native support via plugins/libraries)
-*   **Image Processing:** Native modules or specialized libraries (e.g., react-native-vision-camera with custom ML Kit integration, or dedicated SDKs)
-*   **Linting & Formatting:** Biome
-*   **Testing:** Vitest (Unit), Playwright (E2E - for simulated environments if applicable, or React Native Testing Library)
+*   **Fidelity Capture:** Utilizes native camera APIs via Expo for 16-bit color depth capture, minimizing compression artifacts.
+*   **Intelligent Edge Detection:** Real-time, high-speed visual algorithms for perfect automatic cropping and perspective correction.
+*   **Batch Processing:** Capture multiple pages into a single, consolidated PDF/JSON object.
+*   **Optimized Archiving:** Integration with cloud storage services (Configurable via Environment Variables).
+*   **Hyper-Configurable UX:** Full adherence to Material You 3.0 theming, allowing users to customize contrast, font sizing, and motion profiles.
 
----
+## ⚛️ Apex Technology Stack (2026 Standard)
 
-## 💡 Key Features
+This project is built using the most modern, high-velocity toolchain available, ensuring long-term maintainability and performance.
 
-*   **High-Fidelity Scanning:** Advanced image capture with automatic edge detection, perspective correction, and image enhancement (brightness, contrast, denoising).
-*   **Multi-Page Documents:** Seamlessly combine multiple scans into a single document.
-*   **Digital Archiving:** Secure and organized storage of scanned documents with robust tagging and search capabilities.
-*   **Cloud Sync:** Optional synchronization with popular cloud storage providers (e.g., Google Drive, Dropbox, OneDrive).
-*   **OCR Integration:** Optical Character Recognition to make scanned documents searchable and extract text.
-*   **Cross-Platform:** Native performance and look-and-feel on both iOS and Android.
-*   **User-Friendly Interface:** Intuitive design focused on speed and ease of use.
+| Category | Technology | Version/Standard |
+| :--- | :--- | :--- |
+| **Platform** | React Native | Latest Stable (Expo Managed) |
+| **Language** | TypeScript | Strict Mode 6.x |
+| **Bundler** | Vite | 7.x (High-speed HMR) |
+| **State Mgmt** | Signals / Zustand | Modern, performant state patterns |
+| **Styling** | TailwindCSS / Tamagui | Utility-first, highly configurable |
+| **Testing** | Vitest / Playwright | Unit & End-to-End Validation |
+| **Formatting** | Biome | Consolidated formatter/linter |
 
----
+## 🚀 Development & Setup
 
-## 🔧 Development Setup
+Follow these instructions to get a copy of the project running on your local machine for development and testing purposes.
 
-To get started with development, ensure you have the following prerequisites:
+### Prerequisites
 
-1.  **Node.js:** v20 or higher.
-2.  **Expo CLI:** `npm install -g expo-cli`
-3.  **React Native Environment:** Follow [Expo's official setup guide](https://docs.expo.dev/get-started/installation/).
+Ensure you have Node.js (v20+), Yarn/NPM, and the Expo CLI installed.
 
-**Clone the Repository:**
+### Installation
 
 ```bash
-git clone https://github.com/yourusername/ScannerFlow.git
-cd ScannerFlow
-```
+git clone https://github.com/USERNAME/ScannerFlow-Document-Capture-Mobile-App.git
+cd ScannerFlow-Document-Capture-Mobile-App
 
-**Install Dependencies:**
-
-```bash
+# Use uv/npm/yarn for dependency management (uv recommended for speed)
 npm install
 # or
 yarn install
-# or
-pnpm install
 ```
 
----
+### Execution
 
-## ▶️ Development Scripts
+Run the application via Expo for local simulation or development:
 
-| Script        | Description                                         |
-| :------------ | :-------------------------------------------------- |
-| `npm start`   | Starts the Expo development server.                 |
-| `npm run dev` | Alias for `npm start`.                              |
-| `npm run android` | Builds and runs the app on an Android emulator/device. |
-| `npm run ios`   | Builds and runs the app on an iOS simulator/device.   |
-| `npm run test`  | Runs unit tests using Vitest.                       |
-| `npm run lint`  | Lints and formats code with Biome.                  |
-| `npm run lint:fix`| Lints and automatically fixes code with Biome.      |
+| Script | Command | Description |
+| :--- | :--- | :--- |
+| **Start** | `npm run dev` | Runs the application with HMR enabled via Vite/Expo. |
+| **Type Check** | `npm run typecheck` | Enforces TypeScript strict compliance. |
+| **Lint/Format** | `npx @biomejs/biome check --apply` | Automatically fixes formatting and style issues. |
+| **Test (Unit)** | `npm run test:unit` | Executes isolated component and logic tests (Vitest). |
+| **Test (E2E)** | `npm run test:e2e` | Executes user flow validation (Playwright). |
 
----
+## 🏗️ Development Principles
 
-## 🗄️ Development Principles
+All code committed to this repository must strictly adhere to these architectural mandates:
 
-*   **SOLID:** Adherence to Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles.
-*   **DRY (Don't Repeat Yourself):** Automate repetitive tasks and abstract common logic.
-*   **KISS (Keep It Simple, Stupid):** Prioritize straightforward solutions over complexity.
-*   **YAGNI (You Aren't Gonna Need It):** Implement features only when required.
-*   **CQS (Command Query Separation):** Methods are either commands (perform actions) or queries (return data), not both.
-*   **12-Factor App:** Principles applied where applicable for mobile app configuration and resource management.
+1.  **SOLID Compliance:** Design for extensibility and maintainability (Single Responsibility, Open/Closed, etc.).
+2.  **DRY & KISS:** Eliminate all possible repetition. Logic must be transparently simple.
+3.  **Fail Fast & Resilience:** Input validation must be aggressive. Application must **NEVER** crash due to expected user errors; use robust `try-catch` for all I/O operations.
+4.  **UI/UX Singularitry:** Every interactive element requires immediate, fluid feedback (INP < 200ms goal).
 
----
-
-## 🔒 Security Guidelines
-
-*   **Input Validation:** All user inputs and data from external sources must be rigorously validated and sanitized to prevent injection attacks (OWASP Top 10 2025 compliance).
-*   **Secure Storage:** Sensitive data (API keys, tokens) should be stored using secure, platform-specific mechanisms (e.g., Expo SecureStore).
-*   **Network Security:** Utilize HTTPS for all network communications. Implement certificate pinning if necessary.
-*   **Dependency Auditing:** Regularly audit dependencies for known vulnerabilities using `npm audit` or similar tools.
-*   **SBOM Generation:** Include Software Bill of Materials (SBOM) in release artifacts.
-*   **Permissions:** Request only necessary device permissions and clearly explain their purpose to the user.
-
----
-
-## ✅ Testing Strategy
-
-*   **Testing Pyramid:** Maintain a balance between Unit, Integration, and End-to-End tests.
-*   **Unit Tests:** Cover individual components, utility functions, and state logic using Vitest.
-*   **Integration Tests:** Test interactions between modules and features.
-*   **E2E/UI Tests:** Use React Native Testing Library for simulating user interactions and verifying UI behavior. Playwright can be considered for specific web-based components if applicable.
-*   **Coverage Mandate:** Aim for 100% code coverage for all critical modules. Every production file must have a corresponding test file.
-*   **Zero Console Errors:** The application must run without any console errors in production builds.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please refer to the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for detailed guidelines on how to submit bug reports, feature requests, and pull requests.
-
----
-
-## ⚖️ License
-
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## 🤖 AI Agent Directives
+## 🤖 AI Agent Directives (Read First)
 
 <details>
-<summary>AI Agent Directives (Click to Expand)</summary>
+<summary><strong>⚙️ Agent Configuration & Verification Commands (CRITICAL)</strong></summary>
 
-### 1. Identity & Prime Directive
-*   **Role:** Senior Principal Software Architect, Master Technical Copywriter, DevOps Strategist.
-*   **Experience:** 40+ years elite industry experience.
-*   **Context:** December 2025, building for 2026 standards.
-*   **Output Standard:** EXECUTION-ONLY. No plans, only executed code, updated docs, and applied fixes.
-*   **Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
+This system relies on **TypeScript 6.x**, **React Native (Expo)**, and the **Feature-Sliced Design (FSD)** pattern.
 
-### 2. AI Orchestration & Gemini Protocol (Late 2025)
-*   **Mandate:** Use specific Gemini models in Fallback Cascade:
-    *   Tier 1: `gemini-3-pro-preview`
-    *   Tier 2: `gemini-2.5-pro`
-    *   Tier 3: `gemini-2.5-flash`
-    *   Tier 4: `gemini-2.5-flash-lite-preview-09-2025`
-    *   Tier 5: `gemini-2.0-flash`
-*   **Circuit Breaker:** Trigger Cool-Off Period & fallback on 429/500 errors.
-*   **Settings:** Models selectable in user configuration.
+### Apex Toolchain Definition
+*   **Language:** TypeScript (Strict)
+*   **Linter/Formatter:** Biome (Used for all file modifications)
+*   **Testing:** Vitest (Unit), Playwright (E2E)
+*   **Architecture:** FSD (Ensure separation between `features/`, `shared/`, and `pages/` layers.)
+*   **Design Mandate:** Adhere to Material You 3.0 aesthetic standards and prioritize low Interaction to Next Paint (INP).
 
-### 3. Context-Aware Apex Tech Stacks (Late 2025 Standards)
-*   **Project Type:** Mobile Application (TypeScript/React Native)
-*   **Applied Stack (Scenario A: WEB / APP / EXTENSION):
-    *   **Language:** TypeScript 6.x (Strict)
-    *   **Framework:** React Native 0.7x
-    *   **Bootstrapping:** Expo 0.7x
-    *   **Bundler:** Vite 7
-    *   **State:** Signals (or alternative like Zustand/Jotai)
-    *   **Lint/Test:** Biome (Lint/Format), Vitest (Unit), Playwright (E2E - if applicable) / React Native Testing Library.
+### Verification Commands
 
-### 4. Recursive Perfection Loop ("Zero-Error" Mandate)
-*   **Loop:** Analyze -> Fix -> Lint/Format -> Test -> DECISION GATE (Iterate until clean).
-*   **Constraint:** DO NOT STOP until the build is perfectly clean.
+To verify alignment with architectural standards, execute the following sequence:
 
-### 5. Core Architectural Principles
-*   **SOLID MANDATE:** SRP, OCP, LSP, ISP, DIP.
-*   **MODULARITY:** Feature-First Structure.
-*   **CQS:** Command or Query, never both.
-*   **12-Factor App:** Config in environment.
+1.  **Full Lint & Format:** `npx @biomejs/biome check --apply src/`
+2.  **Unit Test Verification:** `npm run test:unit` (Must pass with 100% coverage mandate met for modified files).
+3.  **E2E Simulation:** `npx playwright test` (Simulate full capture-and-archive workflow).
 
-### 6. Code Hygiene & Standards
-*   **SEMANTIC NAMING PROTOCOL:** Descriptive Verbs, `camelCase` (TS/JS), `snake_case` (Python), `PascalCase` (Classes).
-*   **CLEAN CODE RULES:** Verticality, Guard Clauses, DRY & KISS, Zero Comments (use for "Why").
-
-### 7. Reliability, Security & Sustainability
-*   **DEVSECOPS PROTOCOL:** Zero Trust (OWASP 2025), SBOMs, Fail Fast, Encryption.
-*   **EXCEPTION HANDLING:** Never crash, `try-catch-finally`, retry logic.
-*   **GREEN SOFTWARE:** Rule of Least Power, Efficiency, Lazy Loading.
-
-### 8. Comprehensive Testing Strategy
-*   **FOLDER SEPARATION PROTOCOL:** `tests/` for tests only.
-*   **TESTING PYRAMID:** Fast, Isolated, Repeatable.
-*   **COVERAGE MANDATE:** 1:1 mapping, Scenario Coverage.
-*   **Zero-Error Standard:** 0 console errors.
-
-### 9. UI/UX Aesthetic Singularity (2026 Standard)
-*   **VISUAL LANGUAGE:** Liquid Glass + Neo-Brutalist + Material You 3.0.
-*   **MOTION:** MANDATORY fluid animations.
-*   **PERFORMANCE UX:** INP < 200ms, Optimistic UI.
-*   **INTERACTION DESIGN:** Hyper-Personalization, Micro-interactions.
-*   **HYPER-CONFIGURABILITY:** User-configurable features/colors.
-
-### 10. Documentation & Version Control
-*   **HERO-TIER README:** BLUF, Live Sync, Visuals, AI Replication Block, "Star ⭐ this Repo".
-*   **ADVANCED GIT OPERATIONS:** `git log`/`blame`, Conventional Commits, Semantic Versioning.
-
-### 11. Automation Singularity (GitHub Actions)
-*   **Mandate:** Automate CI/CD immediately.
-*   **Workflows:** Integrity (Lint/Test), Security (Audit/SBOM), Release (Versioning/Artifacts), Deps (Auto-merge).
-
-### 12. Atomic Execution Cycle
-*   **Loop:** Audit -> Research -> Plan -> Act -> Automate -> Docs -> Verify -> REITERATE -> Commit.
-*   **Constraint:** DO NOT STOP until the build is perfectly clean.
+*Agents must recursively re-run verification steps until zero errors/warnings are reported.*
 
 </details>
+
+## 🤝 Contribution & Security
+
+We welcome contributions from engineers who prioritize code quality and architectural rigor. Please adhere to our standards:
+
+1.  **Fork & Clone:** Create a feature branch off `main`.
+2.  **Conventional Commits:** All commits **MUST** follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) (e.g., `feat: add batch scanning mode`).
+3.  **Review Process:** Pull Requests must pass CI checks automatically before review.
+
+**Security Policy:** All API interactions and data storage must be encrypted in transit and at rest. Sensitive user configurations are stored only in environment variables or secure local storage (not committed to the repository). Review the full policy in `.github/SECURITY.md`.
+
+--- 
+
+*ScannerFlow: Capturing Tomorrow, Today.*
