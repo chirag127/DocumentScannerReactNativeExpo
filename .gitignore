@@ -1,54 +1,93 @@
-# Dependencies
-node_modules/
-npm-debug.log
-yarn-error.log
+# Apex Technical Authority Standard .gitignore
+# Project: ScannerFlow-Document-Capture-And-Archive-Mobile-App
+# Stack: React Native, Expo, TypeScript
 
-# Build output
-dist/
-build/
-.next/
-.nuxt/
-vendor/
-
-# Vite
-.vite/
-
-# Expo
-.expo/
-logs/
+# --- Generic & OS ---
+# Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# IDE / Editor specific
-.vscode/
-.idea/
-*.swp
-*.swo
+# OS-generated files
 .DS_Store
-
-# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-.DS_Store
 
+# --- Node.js & Package Managers ---
+# Dependency directories
+node_modules/
+
+# --- IDE & Editor Config ---
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (WebStorm, etc.)
+.idea/
+
+# --- Testing ---
+# Test reports and coverage
+coverage/
+.nyc_output/
+
+# --- Bundler & Caches ---
+# Metro bundler cache
+.metro-cache
+
+# Haste cache
+/haste-map-*
+
+# --- Expo & React Native ---
+# Expo directories
+.expo/
+.expo-shared/
+
+# EAS (Expo Application Services)
+.eas/
+eas.json
+
+# Web build output
+web-build/
+
+# --- Native Build Artifacts (iOS & Android) ---
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/.xcode.env.local
+ios/DerivedData
+
+# Android
+android/app/build/
+android/build/
+android/.gradle
+android/app/src/main/assets/
+android/captures/
+android/local.properties
+.cxx/
+
+# --- Secrets & Credentials ---
 # Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
-# Test files
-*.test.js
-*.spec.js
-__snapshots__/
-coverage/
-
-# Tauri
-src-tauri/.data/
-src-tauri/gen/
-src-tauri/target/
-
-# Logs
-*.log
-
-# Uploads (if applicable)
-/uploads/
+# Keystores and signing certificates
+*.jks
+*.p8
+*.p12
+*.key
+*.keystore
+*.mobileprovision
