@@ -1,153 +1,158 @@
-# ScannerFlow-Document-Capture-Mobile-App
+# ScannerFlow: Document Capture & Archive Mobile App
 
-[![GitHub License](https://img.shields.io/github/license/USERNAME/ScannerFlow-Document-Capture-Mobile-App?style=for-the-badge&color=3478F6)](LICENSE)
-[![CI Status](https://img.shields.io/github/workflow/status/USERNAME/ScannerFlow-Document-Capture-Mobile-App/ci.yml?style=for-the-badge)](.github/workflows/ci.yml)
-[![TypeScript](https://img.shields.io/badge/Language-TypeScript%206.x-blue?style=for-the-badge&logo=typescript&logoColor=white)]()
-[![Build Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge&logo=zapier&logoColor=white)]()
-[![Code Style](https://img.shields.io/badge/Linter%20%26%20Formatter-Biome-orange?style=for-the-badge&logo=biome&logoColor=white)]()
-[![Testing](https://img.shields.io/badge/Testing-Vitest%20%26%20Playwright-green?style=for-the-badge&logo=vitest&logoColor=white)]()
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/main/.github/assets/hero_banner.png" alt="ScannerFlow Hero Banner">
+</p>
 
-[**Star ⭐ this Repo** if you value high-fidelity mobile tooling!]
+<p align="center">
+    <a href="https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white" alt="Build Status"></a>
+    <a href="https://codecov.io/gh/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App"><img src="https://img.shields.io/codecov/c/github/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App?style=flat-square&logo=codecov&logoColor=white" alt="Code Coverage"></a>
+    <a href="#"><img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white" alt="Expo"></a>
+    <a href="#"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"></a>
+    <a href="https://biomejs.dev/"><img src="https://img.shields.io/badge/linted_with-Biome-blue?style=flat-square&logo=biome&logoColor=white" alt="Biome Linter"></a>
+    <a href="https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg?style=flat-square" alt="License"></a>
+    <a href="https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/stargazers"><img src="https://img.shields.io/github/stars/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App?style=flat-square&logo=github&logoColor=white" alt="GitHub stars"></a>
+</p>
 
----
-
-## BLUF: Bottom Line Up Front
-
-**ScannerFlow** is a state-of-the-art, high-performance document capture application built with **React Native and Expo**, engineered for rapid, intelligent digital archiving. It enforces future-proof architecture, delivering superior image quality and optimized UX using the latest 2026 mobile development standards.
-
-## 🧭 Architecture Overview (Feature-Sliced Design)
-
-This application adheres strictly to the Feature-Sliced Design (FSD) pattern, ensuring strict separation of concerns, high testability, and modular scalability for the React Native environment.
-
-```ascii
-. (Root)
-├── src/
-│   ├── app/            (Application Entry & Global State)
-│   ├── features/       (Business Logic & Features)
-│   │   ├── scanner/    (Core Document Capture Logic)
-│   │   ├── history/    (Archive Browsing & Search)
-│   │   └── settings/   (User Preferences & Configuration)
-│   ├── shared/
-│   │   ├── ui/         (Atomic/Shared Components: Buttons, Icons)
-│   │   └── lib/        (Utility Functions, API Clients)
-│   └── pages/
-│       ├── Home.tsx
-│       └── ArchiveView.tsx
-├── .github/            (DevOps & Governance)
-├── tests/              (Isolated Test Suites)
-└── package.json
-```
-
-## 📋 Table of Contents
-
-1. [Features](#features)
-2. [Apex Technology Stack (2026 Standard)](#apex-technology-stack-2026-standard)
-3. [Development & Setup](#development--setup)
-4. [Development Principles](#development-principles)
-5. [🤖 AI Agent Directives (Read First)](#-ai-agent-directives-read-first)
-6. [Contribution & Security](#contribution--security)
+<p align="center">
+  <a href="https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/stargazers"><strong>Star ⭐ this Repo</strong></a> to support its development!
+</p>
 
 ---
 
-## ✨ Features
+**ScannerFlow** is a high-fidelity document scanning and digital archiving mobile app built with React Native & Expo. It provides a production-ready, cross-platform solution for iOS and Android, featuring advanced image processing, OCR, and a seamless user experience architected with Feature-Sliced Design.
 
-*   **Fidelity Capture:** Utilizes native camera APIs via Expo for 16-bit color depth capture, minimizing compression artifacts.
-*   **Intelligent Edge Detection:** Real-time, high-speed visual algorithms for perfect automatic cropping and perspective correction.
-*   **Batch Processing:** Capture multiple pages into a single, consolidated PDF/JSON object.
-*   **Optimized Archiving:** Integration with cloud storage services (Configurable via Environment Variables).
-*   **Hyper-Configurable UX:** Full adherence to Material You 3.0 theming, allowing users to customize contrast, font sizing, and motion profiles.
+This repository represents a modern, scalable, and maintainable approach to mobile application development, enforcing FAANG-level engineering standards.
 
-## ⚛️ Apex Technology Stack (2026 Standard)
+## Table of Contents
 
-This project is built using the most modern, high-velocity toolchain available, ensuring long-term maintainability and performance.
+- [Architecture](#-architecture)
+- [Key Features](#-key-features)
+- [Getting Started](#-getting-started)
+- [Development Scripts](#-development-scripts)
+- [Core Principles](#-core-principles)
+- [AI Agent Directives](#-ai-agent-directives)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-| Category | Technology | Version/Standard |
-| :--- | :--- | :--- |
-| **Platform** | React Native | Latest Stable (Expo Managed) |
-| **Language** | TypeScript | Strict Mode 6.x |
-| **Bundler** | Vite | 7.x (High-speed HMR) |
-| **State Mgmt** | Signals / Zustand | Modern, performant state patterns |
-| **Styling** | TailwindCSS / Tamagui | Utility-first, highly configurable |
-| **Testing** | Vitest / Playwright | Unit & End-to-End Validation |
-| **Formatting** | Biome | Consolidated formatter/linter |
+## 🏛️ Architecture
 
-## 🚀 Development & Setup
+ScannerFlow strictly adheres to **Feature-Sliced Design (FSD)**, a professional architectural methodology for frontend applications. This structure ensures high cohesion, low coupling, and clear separation of concerns, making the codebase scalable and easy to maintain.
 
-Follow these instructions to get a copy of the project running on your local machine for development and testing purposes.
+sh
+src/
+├── app/                 # 1. App-level logic (routing, providers, global styles)
+├── processes/           # 2. Multi-screen business processes (e.g., user onboarding)
+├── pages/               # 3. Full-screen components (e.g., HomePage, ScanPage)
+│   ├── HomePage/
+│   └── ScanPage/
+├── features/            # 4. Business logic features (e.g., DocumentScan, OcrProcessing)
+│   ├── DocumentScan/
+│   └── OcrProcessing/
+├── entities/            # 5. Core business entities (e.g., Document model and UI)
+│   └── Document/
+├── shared/              # 6. Reusable, non-business logic code (UI kit, libs, API)
+│   ├── api/
+│   ├── config/
+│   ├── lib/
+│   └── ui/              # Reusable UI components (Button, Card, etc.)
+└── tsconfig.json
 
-### Prerequisites
 
-Ensure you have Node.js (v20+), Yarn/NPM, and the Expo CLI installed.
+## ✨ Key Features
 
-### Installation
+- **Cross-Platform:** Single codebase for both iOS and Android using React Native and Expo.
+- **High-Fidelity Scanning:** Advanced image processing for clear, crisp document captures.
+- **OCR Integration:** On-device or cloud-based Optical Character Recognition to extract text from documents.
+- **Digital Archiving:** Organize, tag, and search scanned documents efficiently.
+- **Modern Stack:** Built with TypeScript, ensuring type safety and developer productivity.
+- **Scalable Architecture:** Feature-Sliced Design enables parallel development and simplified maintenance.
+- **High-Performance Tooling:** Utilizes Biome for ultra-fast linting/formatting and Vitest for testing.
 
-```bash
-git clone https://github.com/USERNAME/ScannerFlow-Document-Capture-Mobile-App.git
-cd ScannerFlow-Document-Capture-Mobile-App
+## 🚀 Getting Started
 
-# Use uv/npm/yarn for dependency management (uv recommended for speed)
-npm install
-# or
-yarn install
-```
+Follow these instructions to get the development environment running.
 
-### Execution
+**Prerequisites:**
 
-Run the application via Expo for local simulation or development:
+- Node.js (LTS version)
+- Yarn or NPM
+- Expo Go app on your mobile device or an emulator/simulator
 
-| Script | Command | Description |
-| :--- | :--- | :--- |
-| **Start** | `npm run dev` | Runs the application with HMR enabled via Vite/Expo. |
-| **Type Check** | `npm run typecheck` | Enforces TypeScript strict compliance. |
-| **Lint/Format** | `npx @biomejs/biome check --apply` | Automatically fixes formatting and style issues. |
-| **Test (Unit)** | `npm run test:unit` | Executes isolated component and logic tests (Vitest). |
-| **Test (E2E)** | `npm run test:e2e` | Executes user flow validation (Playwright). |
+**Installation:**
 
-## 🏗️ Development Principles
+1.  **Clone the repository:**
 
-All code committed to this repository must strictly adhere to these architectural mandates:
+    bash
+    git clone https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App.git
+    cd ScannerFlow-Document-Capture-And-Archive-Mobile-App
+    
 
-1.  **SOLID Compliance:** Design for extensibility and maintainability (Single Responsibility, Open/Closed, etc.).
-2.  **DRY & KISS:** Eliminate all possible repetition. Logic must be transparently simple.
-3.  **Fail Fast & Resilience:** Input validation must be aggressive. Application must **NEVER** crash due to expected user errors; use robust `try-catch` for all I/O operations.
-4.  **UI/UX Singularitry:** Every interactive element requires immediate, fluid feedback (INP < 200ms goal).
+2.  **Install dependencies:**
 
-## 🤖 AI Agent Directives (Read First)
+    bash
+    npm install
+    
+
+3.  **Run the application:**
+
+    bash
+    npx expo start
+    
+
+    Scan the QR code with the Expo Go app on your device, or press `a` for Android Emulator or `i` for iOS Simulator.
+
+## 🛠️ Development Scripts
+
+| Script          | Description                                    |
+| --------------- | ---------------------------------------------- |
+| `npm start`     | Starts the Metro bundler for development.      |
+| `npm run android` | Runs the app on a connected Android device/emulator. |
+| `npm run ios`     | Runs the app on the iOS simulator.             |
+| `npm run web`     | Runs the app in a web browser.                 |
+| `npm test`      | Executes tests using Vitest.                   |
+| `npm run lint`    | Lints the codebase with Biome.                 |
+| `npm run format`  | Formats the codebase with Biome.               |
+
+## 🏗️ Core Principles
+
+- **SOLID:** Adherence to the five fundamental principles of object-oriented design.
+- **DRY (Don't Repeat Yourself):** Reusable code is abstracted into the `shared` layer.
+- **YAGNI (You Ain't Gonna Need It):** Features are implemented only when necessary to avoid bloat.
+
+## 🤖 AI Agent Directives
 
 <details>
-<summary><strong>⚙️ Agent Configuration & Verification Commands (CRITICAL)</strong></summary>
+<summary><strong>SYSTEM: APEX TECHNICAL AUTHORITY (DECEMBER 2025 EDITION)</strong></summary>
 
-This system relies on **TypeScript 6.x**, **React Native (Expo)**, and the **Feature-Sliced Design (FSD)** pattern.
+### 1. IDENTITY & PRIME DIRECTIVE
+**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards.
+**Context:** Current Date is **December 2025**. You are building for the 2026 standard.
+**Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
+**Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
-### Apex Toolchain Definition
-*   **Language:** TypeScript (Strict)
-*   **Linter/Formatter:** Biome (Used for all file modifications)
-*   **Testing:** Vitest (Unit), Playwright (E2E)
-*   **Architecture:** FSD (Ensure separation between `features/`, `shared/`, and `pages/` layers.)
-*   **Design Mandate:** Adhere to Material You 3.0 aesthetic standards and prioritize low Interaction to Next Paint (INP).
+### 2. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
+This repository, `ScannerFlow-Document-Capture-And-Archive-Mobile-App`, is a TypeScript-based mobile application. Apply the corresponding Apex Toolchain.
 
-### Verification Commands
+*   **PRIMARY SCENARIO: MOBILE APP (TypeScript / React Native)**
+    *   **Stack:** This project leverages **React Native** (with the **Expo** framework), **TypeScript 6.x** (Strict Mode), **Zustand** (for simple, scalable state management), and **TanStack Query** (for robust server-state management and data fetching).
+    *   **Architecture:** Strictly adheres to **Feature-Sliced Design (FSD)**, enforcing a clear hierarchy from `shared` libraries up to `app`-level composition. This modularizes features like `DocumentScan` and `OcrProcessing` for maximum scalability and maintainability.
+    *   **Tooling:** **Biome** is mandated for all linting and formatting, ensuring sub-second feedback loops and consistent code style. **Vitest** is the standard for unit and integration testing. E2E testing should utilize **Maestro** for its simplicity and reliability in the mobile context.
+    *   **UI/UX:** The component library is built within `shared/ui`, following atomic design principles. All components must be themeable, accessible, and performant.
 
-To verify alignment with architectural standards, execute the following sequence:
-
-1.  **Full Lint & Format:** `npx @biomejs/biome check --apply src/`
-2.  **Unit Test Verification:** `npm run test:unit` (Must pass with 100% coverage mandate met for modified files).
-3.  **E2E Simulation:** `npx playwright test` (Simulate full capture-and-archive workflow).
-
-*Agents must recursively re-run verification steps until zero errors/warnings are reported.*
+*   **VERIFICATION COMMANDS (MANDATORY):**
+    *   Run `npm run lint` before every commit to ensure code quality.
+    *   Run `npm test` to verify that all unit and integration tests are passing.
+    *   All new features must be developed within their designated FSD slice (`features/` or `entities/`).
+    *   No business logic is permitted within the `pages/` or `app/` layers.
 
 </details>
 
-## 🤝 Contribution & Security
+## 🤝 Contributing
 
-We welcome contributions from engineers who prioritize code quality and architectural rigor. Please adhere to our standards:
+Contributions are welcome! Please read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file for guidelines on how to submit pull requests.
 
-1.  **Fork & Clone:** Create a feature branch off `main`.
-2.  **Conventional Commits:** All commits **MUST** follow the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/) (e.g., `feat: add batch scanning mode`).
-3.  **Review Process:** Pull Requests must pass CI checks automatically before review.
+## 📜 License
 
-**Security Policy:** All API interactions and data storage must be encrypted in transit and at rest. Sensitive user configurations are stored only in environment variables or secure local storage (not committed to the repository). Review the full policy in `.github/SECURITY.md`.
-
---- 
-
-*ScannerFlow: Capturing Tomorrow, Today.*
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License** - see the [LICENSE](LICENSE) file for details.
