@@ -1,46 +1,52 @@
 # Pull Request Template
 
-## PR Checklist
+**Please review this PR carefully.**
 
-Please ensure you have checked off the following before submitting your pull request:
+## 🚀 Overview
 
-*   [ ] My code follows the style guidelines of this project.
-*   [ ] I have performed a self-review of my own code.
-*   [ ] I have commented my code, particularly in hard-to-understand areas.
-*   [ ] I have made corresponding changes to the documentation.
-*   [ ] My changes generate no new warnings or errors.
-*   [ ] I have added tests that prove my fix is effective or that my feature works.
-*   [ ] New and existing unit tests pass locally with my changes.
-*   [ ] I have updated any relevant baseline files (e.g., snapshots).
-*   [ ] Any dependent changes have been merged and published.
-*   [ ] I have assigned a reviewer.
+This PR introduces changes to the **ScannerFlow-Document-Capture-Mobile-App** project.
 
-## Description
+**Type of Change:** (Select one)
+- [ ] Feature
+- [ ] Bug fix
+- [ ] Refactor
+- [ ] Documentation
+- [ ] Chore
+- [ ] Performance
+- [ ] Test
 
-Provide a concise summary of the changes introduced in this pull request. What problem does this PR solve, or what new feature does it introduce?
+## 📝 Description
 
-## Related Issues
+<!-- Provide a clear and concise description of the changes made in this PR. -->
+<!-- What problem does this PR solve? What is the impact? -->
 
-Closes #[ISSUE_NUMBER]
-References #[ISSUE_NUMBER]
+## ✨ Related Issues
 
-## Type of Change
+<!-- Link to any related GitHub issues. Use keywords like `closes #123`, `fixes #456` to auto-close issues. -->
 
-*   [ ] Bug fix (non-breaking change which fixes an issue)
-*   [ ] New feature (non-breaking change which adds functionality)
-*   [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-*   [ ] This change requires a documentation update
-*   [ ] Performance Improvement
-*   [ ] Refactor
+## ✅ Checklist
 
-## How Has This Been Tested?
+<!-- Before submitting your PR, please ensure you have checked off all of the following: -->
 
-Describe the tests that you ran to verify your changes. Provide instructions so that others can reproduce the tests. Mention any specific testing suites, commands, or environments used.
+- [ ] **Code adheres to the Apex Technical Authority standards** (SOLID, DRY, KISS, CQS, etc.).
+- [ ] **All new and existing code is covered by comprehensive tests** (Unit, Integration, E2E).
+- [ ] **Code is linted and formatted** using Biome/Ruff.
+- [ ] **No console errors** in the application.
+- [ ] **All changes have been documented** in the README.md (if applicable).
+- [ ] **New dependencies** have been reviewed and added correctly.
+- [ ] **Security best practices** (e.g., input sanitization, dependency audits) have been followed.
+- [ ] **Performance optimizations** have been considered and implemented.
+- [ ] **UI/UX adheres to the 2026 Aesthetic Singularity standards** (Liquid Glass + Neo-Brutalist + Material You 3.0).
+- [ ] **Conventional Commits** format is used for the commit messages.
 
-## Screenshots (if applicable)
+## 📝 Testing Instructions
 
-(Optional) Add screenshots or screen recordings to help explain your changes, especially for UI-related modifications.
+<!-- How can the reviewer test these changes? Provide specific steps or commands. -->
 
-## Notes for the Reviewer
+## 📸 Screenshots/Recordings (Optional)
 
-Add any specific information that might be helpful for the reviewer to understand the context or focus of this PR.
+<!-- If your changes include UI modifications, please provide screenshots or a brief video recording. -->
+
+## 📚 Additional Context
+
+<!-- Any other information that may be helpful for the reviewer. -->
