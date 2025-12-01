@@ -1,0 +1,44 @@
+---
+# Badges configuration for ScannerFlow-Document-Capture-And-Archive-Mobile-App
+
+# Build Status Badge
+build_status:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/actions/workflows/ci.yml
+  alt_text: Build Status
+  markdown: "[![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/ci.yml?style=flat-square)](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/actions/workflows/ci.yml)"
+
+# Code Coverage Badge
+code_coverage:
+  url: https://codecov.io/gh/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App
+  alt_text: Code Coverage
+  markdown: "[![codecov](https://img.shields.io/codecov/c/github/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App?style=flat-square)](https://codecov.io/gh/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App)"
+
+# Tech Stack Badge (TypeScript)
+tech_stack_typescript:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App
+  alt_text: TypeScript
+  markdown: "[![TypeScript](https://img.shields.io/badge/Tech-TypeScript-blue?style=flat-square)]"
+
+# Tech Stack Badge (React Native)
+tech_stack_react_native:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App
+  alt_text: React Native
+  markdown: "[![React Native](https://img.shields.io/badge/Tech-React_Native-blue?style=flat-square)]"
+
+# Lint/Format Badge
+lint_format:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App
+  alt_text: Lint/Format
+  markdown: "[![Biome](https://img.shields.io/badge/Lint%2FFormat-Biome-green?style=flat-square)]"
+
+# License Badge
+license:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/LICENSE
+  alt_text: License
+  markdown: "[![License](https://img.shields.io/badge/License-CC_BY--NC_4.0-blue.svg?style=flat-square)](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/LICENSE)"
+
+# GitHub Stars Badge
+github_stars:
+  url: https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App
+  alt_text: GitHub Stars
+  markdown: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App?style=flat-square&label=Stars)]"
