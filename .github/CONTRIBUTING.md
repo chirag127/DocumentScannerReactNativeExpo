@@ -1,140 +1,136 @@
-# 🚀 Contributing to ScannerFlow-Document-Capture-Mobile-App
+# Contributing to ScannerFlow-Document-Capture-And-Archive-Mobile-App
 
-## 1. Our Vision & Philosophy
+Welcome, esteemed contributor, to the ScannerFlow project! We are thrilled you're considering contributing to this high-fidelity document scanning and digital archiving mobile app. This project operates under the **Apex Technical Authority** standards, emphasizing zero-defect, high-velocity, and future-proof development.
 
-Welcome! We are building **ScannerFlow**, a state-of-the-art React Native mobile application engineered for high-fidelity document scanning and intelligent digital archiving. Our core philosophy is **Zero-Defect, High-Velocity, Future-Proof**. We strive for pristine code quality, rapid iteration, and long-term maintainability.
+Our collective mission is to deliver a production-ready mobile application built with React Native and Expo, featuring advanced image processing, OCR, and a seamless UX across iOS & Android. Every contribution, no matter how small, is a step towards achieving this vision.
 
-This project adheres to FAANG-level standards and the principles of "Managing the Unmanageable." We aim for a codebase that is not just functional but elegant, performant, and a joy to work with.
+## 💡 Apex Philosophy & Standards
 
-## 2. Prerequisites for Contribution
+*   **Zero-Defect:** Strive for bug-free code. All contributions must pass thorough testing and adhere to linting/formatting standards.
+*   **High-Velocity:** Optimize for efficient development cycles, clear communication, and rapid iteration without compromising quality.
+*   **Future-Proof:** Design and implement with scalability, maintainability, and extensibility in mind. Adhere to the Feature-Sliced Design (FSD) architecture.
 
-Before you dive in, ensure your development environment is up to snuff:
+## ✍️ Code of Conduct
 
-*   **Node.js:** Version 20.x or higher.
-*   **npm/Yarn/pnpm:** A modern package manager (we use npm by default).
-*   **React Native:** Familiarity with the framework and its ecosystem.
-*   **Expo:** Understanding of Expo's build and development tools.
-*   **TypeScript:** Proficiency in strict TypeScript is mandatory.
-*   **Git:** Basic Git commands and a GitHub account.
-*   **Editor:** VS Code with recommended extensions (e.g., ESLint, Prettier, TypeScript).
+We adhere to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html). By participating, you are expected to uphold this code. Please report unacceptable behavior to [chirag127.dev@gmail.com](mailto:chirag127.dev@gmail.com).
 
-## 3. Getting Started: The Apex Toolchain & Local Setup
+## 🎯 How Can You Contribute?
 
-We utilize a standardized, high-performance toolchain to ensure consistency and efficiency.
+There are many ways to contribute to ScannerFlow:
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone git@github.com:your-org/ScannerFlow-Document-Capture-Mobile-App.git
-    cd ScannerFlow-Document-Capture-Mobile-App
-    ```
+### 🐞 Reporting Bugs
 
-2.  **Install Dependencies:**
-    We use `npm` for package management. For faster installs, consider using `pnpm` if you have it globally installed.
-    ```bash
+Encountered a bug? Your detailed reports are invaluable! Please open an issue using our [Bug Report template](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=).
+
+Before submitting, please:
+
+*   Check existing issues to see if the bug has already been reported.
+*   Provide clear, concise steps to reproduce the bug.
+*   Include relevant environment details (OS, device, Expo version).
+*   Attach screenshots or screen recordings if applicable.
+
+### 🚀 Suggesting Enhancements
+
+Have an idea for a new feature or an improvement? We welcome your suggestions!
+
+*   Open a new issue describing your idea in detail.
+*   Explain the problem it solves and how it benefits users.
+*   Provide mockups or examples if possible.
+
+### 💻 Contributing Code
+
+Ready to dive into the codebase? Follow these guidelines for a smooth contribution process:
+
+#### 1. Development Setup
+
+To get your local development environment ready, follow these steps:
+
+*   **Prerequisites:** Ensure you have [Node.js](https://nodejs.org/) (LTS recommended), `npm` or `yarn`, and the [Expo CLI](https://docs.expo.dev/get-started/installation/) installed on your machine.
+    bash
+    # Install Expo CLI globally
+    npm install -g expo-cli
+    # or
+    yarn global add expo-cli
+    
+
+*   **Fork the Repository:** Start by forking `[ScannerFlow-Document-Capture-And-Archive-Mobile-App](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App)` to your GitHub account.
+
+*   **Clone Your Fork:**
+    bash
+    git clone https://github.com/YOUR_USERNAME/ScannerFlow-Document-Capture-And-Archive-Mobile-App.git
+    cd ScannerFlow-Document-Capture-And-Archive-Mobile-App
+    
+
+*   **Install Dependencies:**
+    bash
     npm install
-    ```
+    # or
+    yarn install
+    
 
-3.  **Environment Variables:**
-    This project uses environment variables for configuration. Copy the example environment file:
-    ```bash
-    cp .env.example .env
-    ```
-    *Edit the `.env` file to configure your local development settings.*
+*   **Run the Application:**
+    bash
+    npm start
+    # or
+    expo start
+    
+    This will open the Expo Dev Tools in your browser. You can then open the app on your physical device using the Expo Go app or an iOS/Android simulator.
 
-## 4. Development Workflow: The Recursive Perfection Loop
+#### 2. Coding Guidelines
 
-Our development process is guided by the **Recursive Perfection Loop**, ensuring that every change is tested, linted, and meets our high standards before merging.
+We maintain strict coding standards to ensure code quality and consistency:
 
-1.  **Feature Development:**
-    *   **Branching Strategy:** Always create a new branch for your feature or fix. Use descriptive names adhering to Conventional Commits (e.g., `feat/add-image-compression`, `fix/resolve-scanner-orientation-bug`).
-    *   **Code Structure:** Follow the **Feature-Sliced Design (FSD)** principles where applicable for organizing code within the `src/` directory. Prioritize modularity and low coupling.
-    *   **TypeScript Strictness:** Ensure all TypeScript configurations are set to their strictest levels.
+*   **Language:** All code must be written in **TypeScript (Strict Mode)**.
+*   **Architecture:** Adhere to the **Feature-Sliced Design (FSD)** principles for structuring the application.
+    *   Organize code into `app`, `pages`, `widgets`, `features`, `entities`, `shared` layers.
+    *   Respect import rules and layer boundaries.
+*   **Linting & Formatting:** We use **Biome** for blazing-fast linting and formatting. Ensure your code passes all Biome checks before committing.
+    bash
+    # Check for issues
+    npm run lint
+    # Automatically fix fixable issues and format code
+    npm run format
+    
+*   **Testing:** All new features and bug fixes require corresponding tests. We use **Vitest** for unit and integration testing.
+    bash
+    # Run all tests
+    npm test
+    # Run tests in watch mode
+    npm run test:watch
+    
+*   **Principles:** Adhere to **SOLID**, **DRY** (Don't Repeat Yourself), and **YAGNI** (You Ain't Gonna Need It) principles.
+*   **Commit Messages:** Follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) for clear and consistent commit history.
+    *   Examples: `feat: add document scanning`, `fix: resolve OCR text alignment`, `docs: update contributing guide`.
 
-2.  **Testing:**
-    *   **Unit Tests:** Write comprehensive unit tests using **Vitest** located in parallel `__tests__` or `*.test.ts` files within feature modules.
-    *   **E2E Tests:** For critical user flows, implement End-to-End (E2E) tests using **Playwright** (if integrated for mobile/web). Ensure all tests pass.
-    *   **Coverage:** Aim for 100% code coverage for critical modules. Every source file **MUST** have a corresponding test file.
+#### 3. Pull Request Process
 
-3.  **Linting & Formatting:**
-    *   We use **Biome** for lightning-fast linting and formatting. It enforces our code style automatically.
-    *   Run the linter and formatter before committing:
-        ```bash
-        npx @biomejs/biome check --apply
-        ```
+1.  **Create a New Branch:** Always create a new branch for your feature or bug fix from the `main` branch.
+    bash
+    git checkout main
+    git pull origin main
+    git checkout -b feature/my-awesome-feature
+    
+2.  **Develop Your Changes:** Implement your feature or fix, ensuring all coding guidelines are met.
+3.  **Test Your Changes:** Write and run tests, ensuring all existing and new tests pass.
+4.  **Lint & Format:** Run `npm run format` and `npm run lint` to ensure code consistency.
+5.  **Commit Your Changes:** Use Conventional Commits for your commit messages.
+6.  **Push Your Branch:**
+    bash
+    git push origin feature/my-awesome-feature
+    
+7.  **Open a Pull Request (PR):** Navigate to your fork on GitHub and open a new Pull Request targeting the `main` branch of `[chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App)`. Our [PR template](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/.github/PULL_REQUEST_TEMPLATE.md) will guide you through providing essential information.
+8.  **Address Feedback:** Our team will review your PR. Be responsive to feedback and make necessary adjustments.
 
-4.  **Committing:**
-    *   **Conventional Commits:** All commit messages must adhere to the Conventional Commits specification (e.g., `feat: Implement OCR processing`, `fix: Correct image scaling on Android`).
-    *   **Atomic Commits:** Each commit should represent a single, logical change. Ensure tests and linters pass *before* committing.
+### 📝 Improving Documentation
 
-5.  **Pull Requests (PRs):**
-    *   **Create PR:** Open a Pull Request against the `main` branch.
-    *   **PR Template:** Fill out the PR template completely, describing the changes and the problem they solve.
-    *   **Code Review:** Expect thorough code reviews from maintainers. Be responsive to feedback.
-    *   **CI Checks:** Automated checks (linting, testing, builds) will run on your PR. All checks must pass.
+Good documentation is crucial. If you find errors, omissions, or areas for improvement in our `README.md` or any other documentation files, please feel free to open a PR with your suggested changes.
 
-## 5. Code Standards & Principles
+## 🛡️ Security
 
-*   **SOLID:** Adhere strictly to the SOLID principles (SRP, OCP, LSP, ISP, DIP).
-*   **DRY (Don't Repeat Yourself):** Eliminate duplicate code.
-*   **KISS (Keep It Simple, Stupid):** Prefer simple, straightforward solutions.
-*   **YAGNI (You Ain't Gonna Need It):** Do not implement functionality that isn't currently required.
-*   **CQS (Command Query Separation):** Methods should either perform an action (Command) or return data (Query), not both.
-*   **Self-Documenting Code:** Write clear, concise code. Avoid comments unless explaining the *why* behind a complex or non-obvious decision.
-*   **Error Handling:** Implement robust error handling. The application must **NEVER** crash. Use `try-catch-finally` blocks diligently.
-*   **Security:** Sanitize **ALL** inputs. Follow OWASP Top 10 (2025) guidelines. Consider security implications in all changes.
+If you discover a security vulnerability, please refer to our [Security Policy](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/.github/SECURITY.md) for instructions on how to report it responsibly. Do not open a public issue.
 
-## 6. Project Structure (Feature-Sliced Design - FSD)
+## 📄 License
 
-We organize the project structure based on features, promoting modularity and separation of concerns.
+By contributing to ScannerFlow, you agree that your contributions will be licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/LICENSE).
 
-```
-src/
-├── app/           # App entry point, routing, global providers
-├── features/
-│   ├── document-scanning/ # Feature: Core scanning logic, camera integration
-│   │   ├── ui/
-│   │   ├── api/
-│   │   ├── model/
-│   │   └── index.ts
-│   ├── image-processing/
-│   │   ├── ui/
-│   │   ├── lib/
-│   │   └── index.ts
-│   └── ... (other features like auth, settings, archiving)
-├── entities/
-│   ├── document/
-│   │   ├── model/
-│   │   └── ...
-├── shared/
-│   ├── ui/        # Reusable UI components (e.g., Button, Input)
-│   ├── lib/       # Utility functions, helpers
-│   ├── api/
-│   ├── config/
-│   └── ...
-├── main.tsx       # App root component
-└── ...
-```
-
-## 7. Reporting Issues & Feature Requests
-
-*   **Bug Reports:** Please provide a detailed description of the bug, steps to reproduce, expected behavior, and actual behavior. Include relevant device information and console logs if possible.
-*   **Feature Requests:** Clearly articulate the proposed feature, its benefits, and potential use cases.
-*   **Use Issue Templates:** Utilize the provided GitHub issue templates (`bug_report.md`) for consistency.
-
-## 8. Asking for Help & Communication
-
-If you encounter issues or need clarification, please:
-
-1.  Check the documentation (`README.md`, `AGENTS.md`).
-2.  Search existing issues.
-3.  If still stuck, open a GitHub Issue tagged appropriately (e.g., `question`, `help-wanted`).
-
-## 9. Code of Conduct
-
-All contributors are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) (if applicable, otherwise, adopt a standard like the Contributor Covenant).
-
-## 10. Licensing
-
-This project is licensed under the [CC BY-NC 4.0 License](LICENSE). See the `LICENSE` file for more details.
-
----
+Thank you for making ScannerFlow a better project!
