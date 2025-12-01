@@ -1,48 +1,65 @@
-# Security Policy
+# Security Policy for ScannerFlow-Document-Capture-Mobile-App
 
-## Supported Versions
+## 🚀 Commitment to Security
 
-We are committed to providing a secure product. Security vulnerabilities are taken very seriously and will be addressed promptly. We actively support and patch the latest stable version of the application.
+At ScannerFlow, we are committed to maintaining the highest standards of security for our users and the platform. This repository adheres to a robust security policy, embracing the **DevSecOps Protocol** to ensure the integrity, confidentiality, and availability of our application.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
+## 🔒 Vulnerability Reporting
 
-We will not be providing security patches for older versions. Please upgrade to the latest version to ensure you have the latest security fixes.
+We encourage responsible disclosure of security vulnerabilities. If you discover any security issues, please report them to us promptly so we can address them quickly.
 
-## Reporting a Vulnerability
+### 1. Reporting Channel
 
-We encourage responsible disclosure of security vulnerabilities. If you find a security issue, please report it to us using one of the following methods:
+*   **Primary Contact:** Please send an email to `security@scannerflow.example.com` with a clear subject line, such as "Security Vulnerability Report: [Brief Description]".
+*   **DO NOT** create a public issue for security vulnerabilities.
 
-1.  **Primary Method (Recommended):** Open a **Private Security Vulnerability Report** using GitHub's security advisory feature. This ensures your report is handled securely and confidentially. [Submit a Private Vulnerability Report](https://github.com/YourUsername/YourRepoName/security/advisories/new)
+### 2. What to Include in Your Report
 
-2.  **Email:** Send an email to `security@yourdomain.com` (replace with your actual security contact email). Please use a clear subject line such as "Security Vulnerability Report".
+To help us investigate and resolve the issue efficiently, please provide as much detail as possible:
 
-**Please do NOT disclose the vulnerability publicly before it has been fixed.**
+*   **Vulnerability Type:** (e.g., XSS, CSRF, SQL Injection, Sensitive Data Exposure, Authentication Bypass, etc.)
+*   **Affected Component/Feature:** The specific part of the application where the vulnerability exists.
+*   **Steps to Reproduce:** A clear, step-by-step guide to trigger the vulnerability.
+*   **Proof of Concept (PoC):** If applicable, provide code snippets, screenshots, or recorded videos demonstrating the vulnerability.
+*   **Impact Assessment:** Describe the potential consequences of the vulnerability.
+*   **Your Contact Information:** How we can reach you for follow-up questions.
 
-When reporting a vulnerability, please provide the following information:
+### 3. Our Commitment to You
 
-*   **Vulnerability Type:** (e.g., Cross-Site Scripting (XSS), SQL Injection, Authentication Bypass, etc.)
-*   **Affected Component/Version:** Specify the exact part of the application and version where the vulnerability exists.
-*   **Steps to Reproduce:** Provide clear, step-by-step instructions to reproduce the vulnerability.
-*   **Proof of Concept (PoC):** If available, include any code snippets, screenshots, or recordings that demonstrate the vulnerability.
-*   **Impact Assessment:** Describe the potential impact of the vulnerability.
-*   **Your Contact Information:** So we can follow up with you regarding your report.
+*   **Acknowledgement:** We will acknowledge receipt of your report within **48 hours**. 
+*   **Timely Response:** We will investigate the reported vulnerability thoroughly and communicate our findings and planned resolution timeline.
+*   **No Harm:** We will not engage in or condone any malicious activity against you for responsibly disclosing a vulnerability.
+*   **Credit:** We will publicly acknowledge your contribution (with your permission) on our `CREDITS.md` file or in release notes once the vulnerability is resolved.
 
-## Our Commitment
+## 🛡️ Security Best Practices & Principles
 
-*   We will acknowledge your report within **72 hours**.
-*   We will **NOT** take legal action against researchers who act in good faith and follow this security policy.
-*   We aim to fix valid security vulnerabilities within **30 days** of confirmation.
-*   We will notify the reporter once a fix has been deployed and will publicly acknowledge their contribution (if desired) after the fix is released.
+ScannerFlow is built with security as a core tenet. We adhere to the following principles:
 
-## Security Best Practices
+*   **Zero Trust Architecture:** We treat all network traffic and user access requests as untrusted by default, requiring strict verification.
+*   **Input Validation (OWASP Top 10 2025):** All external inputs (user data, API requests, file uploads) are rigorously validated and sanitized to prevent injection attacks and data corruption.
+*   **Secure Defaults:** The application is configured with secure settings out-of-the-box. 
+*   **Principle of Least Privilege:** Users and system components are granted only the minimum permissions necessary to perform their functions.
+*   **Secure Coding Standards:** We follow the **Clean Code Rules** and **SOLID Mandate** to build maintainable and secure code. Code must be self-documenting, and sensitive logic is protected.
+*   **Dependency Management:** All third-party dependencies are regularly audited for known vulnerabilities using tools like `npm audit` and `dependabot`. We generate **SBOMs** for all builds.
+*   **Data Encryption:** Sensitive data is encrypted both in transit (TLS 1.3+) and at rest using industry-standard algorithms.
+*   **Fail Fast & Exception Handling:** The application is designed to detect errors early and report them, preventing unexpected behavior and potential exploits. Critical I/O operations are wrapped in robust `try-catch-finally` blocks with retry logic.
+*   **Regular Audits:** Security audits and penetration tests are conducted periodically.
 
-*   **Zero Trust Architecture:** All inputs are treated as untrusted. Input validation and sanitization are critical. (OWASP Top 10 2025 Principles).
-*   **Dependency Auditing:** Regular scanning of dependencies for known vulnerabilities (SBOM generation mandated).
-*   **Secure Coding:** Adherence to SOLID, DRY, KISS principles. Use of guard clauses and CQS for maintainable and secure code.
-*   **Fail Fast:** Errors are propagated and handled immediately to prevent unexpected states.
-*   **Encryption:** Sensitive data is encrypted at rest and in transit using industry-standard algorithms.
-*   **Supply Chain Security:** Secure development practices and artifact integrity checks are enforced.
+## 🚨 Incident Response
 
-Thank you for helping to keep ScannerFlow secure!
+In the event of a confirmed security incident, we will follow a defined incident response plan to contain, eradicate, and recover from the threat. We will prioritize transparency with our users regarding any impact on their data or service availability.
+
+## 🛠️ Tech Stack Considerations
+
+*   **Language:** TypeScript 6.x
+*   **Framework:** React Native (via Expo)
+*   **Build/Bundler:** Vite 7
+*   **Native Modules:** Tauri v2.x
+*   **Linting/Formatting:** Biome
+*   **Testing:** Vitest, Playwright
+
+This stack is chosen for its performance, security features, and active community support. We stay updated with the latest security patches and best practices for each component.
+
+## 🙏 Thank You
+
+Thank you for helping us keep ScannerFlow secure. Your contributions are invaluable.
