@@ -1,94 +1,90 @@
 ---
-name: Bug Report
-about: Report a bug in the ScannerFlow-Document-Capture-Mobile-App
-title: "[BUG] Short, descriptive summary of the issue"
-labels: bug, needs-triage
+name: "🐛 Bug Report"
+about: "Report a reproducible bug to help us improve ScannerFlow-Document-Capture-And-Archive-Mobile-App."
+title: "[BUG]: Short, Descriptive Title of the Issue"
+labels: "bug, triage"
 assignees: ""
+---
 
+## 🐛 Bug Report
 
-}}
+Thank you for taking the time to report a bug in `ScannerFlow-Document-Capture-And-Archive-Mobile-App`. Your effort helps us make this project more robust and reliable.
 
-## 🐛 Bug Description
+Before submitting, please ensure you've checked the [existing issues](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/issues) to avoid duplicates.
 
-A clear and concise description of what the bug is. What were you trying to do, and what happened instead?
+---
 
-## 📸 Steps to Reproduce
+### 📝 Describe the Bug
 
-1. Go to '...' (e.g., screen, feature).
-2. Click on '....' (e.g., button, link).
-3. Scroll down on '....'.
-4. See error '....' or unexpected behavior.
+A clear and concise description of what the bug is. What happened, and what did you expect to happen?
 
-## 💻 Environment
+---
 
-*   **Device:** (e.g., iPhone 15 Pro, Samsung Galaxy S23)
-*   **OS Version:** (e.g., iOS 17.2.1, Android 14)
-*   **App Version:** (e.g., 1.2.3 - **See `package.json` for precise version**)
-*   **Expo SDK Version:** (If applicable, **See `app.json` or `package.json`**)
+### 再現手順 (Steps to Reproduce)
 
-## 📈 Expected Behavior
+Please provide detailed steps to reproduce the behavior:
 
-What did you expect to happen?
+1.  Go to '...'
+2.  Click on '...'
+3.  Scroll down to '...'
+4.  See error '...'
 
-## ⬇️ Actual Behavior
+---
 
-What actually happened? Please include any error messages or screenshots.
+### 🔍 Expected Behavior
 
-## 🖼️ Screenshots / Screen Recordings (Optional)
+Describe what you expected to happen.
 
-If applicable, add screenshots or screen recordings to help explain your problem. You can drag files here to upload them.
+---
 
-## 📝 Additional Information (Optional)
+### 💥 Actual Behavior
 
-Any other context about the problem. This might include relevant logs, configuration details, or specific scenarios where the bug occurs.
+Describe what actually happened, including any error messages in the console or UI.
 
---- ## AI AGENT DIRECTIVES (FOR FUTURE AUTOMATION)
+---
 
-This section provides critical metadata for AI agents interacting with this repository.
+### 📸 Screenshots/Recordings
 
-<details>
-<summary>AI Directives - Click to Expand</summary>
+If applicable, add screenshots or screen recordings to help explain your problem. Visual aids are extremely helpful for debugging.
 
-### Repository Profile
-*   **Name:** ScannerFlow-Document-Capture-Mobile-App
-*   **Primary Function:** High-fidelity document scanning and intelligent digital archiving.
-*   **Platform:** Mobile (React Native, Expo).
-*   **Primary Language:** TypeScript.
+---
 
-### Apex Toolchain (Late 2025 Standard)
-*   **Language:** TypeScript 6.x
-*   **Framework/Runtime:** React Native, Expo
-*   **Build/Bundler:** Vite 7 (if applicable for build process)
-*   **Native Layer:** Tauri v2.x (If integrated for desktop/hybrid aspects, else N/A for pure mobile)
-*   **State Management:** Signals
-*   **Linting/Formatting:** Biome
-*   **Testing:** Vitest (Unit), Playwright (E2E - if applicable to web views/desktop targets)
-*   **Package Manager:** npm/yarn (standard for React Native)
+### 💻 Environment
 
-### Architectural Principles
-*   **Core Pattern:** Modular Monolith / Feature-Sliced Design (FSD) for React Native.
-*   **SOLID:** Applied rigorously.
-*   **CQS:** Enforced.
-*   **12-Factor App:** Adhered to where applicable for mobile.
+Please provide the following details about your environment:
 
-### Developer Workflow Requirements
-*   **Lint/Format Command:** `npx @biomejs/biome format --write .`
-*   **Check Command:** `npx @biomejs/biome check --apply .`
-*   **Unit Test Command:** `npx vitest`
-*   **E2E Test Command:** `npx playwright test` (If applicable)
-*   **CI/CD:** GitHub Actions (See `.github/workflows/ci.yml`)
-*   **License:** CC BY-NC
+-   **Device:** (e.g., iPhone 15 Pro, Samsung Galaxy S23, Google Pixel 8)
+-   **Operating System:** (e.g., iOS 17.5, Android 14)
+-   **`ScannerFlow-Document-Capture-And-Archive-Mobile-App` Version:** (e.g., v1.0.0, commit hash)
+-   **Expo Go Version (if applicable):** (e.g., 50.0.0)
+-   **Node.js Version:** (e.g., 18.x, 20.x)
+-   **npm/yarn/uv Version:** (e.g., npm 10.x, yarn 1.x, uv 0.1.x)
 
-### Security Mandates
-*   **Input Sanitization:** OWASP Top 10 2025 compliance.
-*   **SBOM Generation:** Required for builds.
-*   **Fail Fast:** Immediate error throwing for invalid states.
-*   **Encryption:** Sensitive data protected.
+---
 
-### UI/UX Directives
-*   **Visual Style:** Liquid Glass + Neo-Brutalist + Material You 3.0 blend.
-*   **Performance:** INP < 200ms, Optimistic UI.
-*   **Interaction:** Hyper-personalization, Micro-interactions.
-*   **Configurability:** User-configurable features and colors.
+### Severity
 
-</details>
+Please select the severity of this issue:
+
+-   [ ] **Critical:** Application crash, data loss, or major functionality completely broken.
+-   [ ] **High:** Significant functionality impaired, major usability issues.
+-   [ ] **Medium:** Minor functionality impaired, inconvenient but not blocking.
+-   [ ] **Low:** Cosmetic issues, minor UI glitches.
+
+---
+
+### Additional Context
+
+Add any other context about the problem here. For example, specific network conditions, unusual device settings, or workarounds you've tried.
+
+---
+
+### 🚀 Possible Solution (Optional)
+
+If you have an idea of how to fix this, or where to look, please share!
+
+---
+
+By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/.github/CODE_OF_CONDUCT.md) and [Contributing Guidelines](https://github.com/chirag127/ScannerFlow-Document-Capture-And-Archive-Mobile-App/blob/main/.github/CONTRIBUTING.md).
+
+Thank you for contributing to the `ScannerFlow-Document-Capture-And-Archive-Mobile-App` project!
